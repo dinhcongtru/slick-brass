@@ -1,0 +1,84 @@
+
+.slide {
+    position: relative;
+    overflow: hidden;
+    &-lst {
+        &-item {
+            &--image {
+                transition: transform 6s;
+                transform: scale(1.1);
+                transform-origin: center;
+                .is-zoomed & {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+    &-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff;
+        &-txt {
+            font-size: 33px;
+            line-height: 2;
+            letter-spacing: 1.98px;
+            display: inline-block;
+            position: relative;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 10px 10px rgba(50, 0, 0, 0.9));
+            font-weight: 500;
+            &--thumb {
+                position: absolute;
+                left: -5px;
+                top: -44.5px;
+                pointer-events: none;
+            }
+        }
+        &-decoration {
+            margin-bottom: 30px;
+            &--txt {
+                display: inline-block;
+                font-size: 18px;
+                font-weight: 500;
+                position: relative;
+                line-height: 26px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background: #bbb;
+                    height: 1px;
+                    width: 15px;
+                    top: 15px;
+                    left: -25px;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background: #bbb;
+                    height: 1px;
+                    width: 15px;
+                    top: 15px;
+                    right: -25px;
+                }
+            }
+        }
+        &-btn {
+            font-size: 16px;
+            font-family: $font-futura;
+            display: inline-block;
+            box-sizing: border-box;
+            width: 200px;
+            line-height: 60px;
+            padding: 0 32px;
+            text-align: center;
+            transition: all 0.5s ease;
+            border: 1.6px solid #fff;
+            background: #fff;
+            color: #000;
+            letter-spacing: 1.92px;
+        }
+    }
+}
